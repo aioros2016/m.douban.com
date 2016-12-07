@@ -29,7 +29,7 @@
 │   ├── controllers    // 控制器目录
 │   ├── views          // 视图目录
 │   ├── less           // 样式预处理器目录
-│   ├── json           // 数据
-├── gulpfils.js      目录  // gulp任务配置文件
+│   ├── json           // 数据目录
+├── gulpfils.js        // gulp任务配置文件
 └── package.json       // gulp配置文件
 </pre>
