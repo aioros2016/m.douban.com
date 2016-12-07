@@ -1,0 +1,57 @@
+<div class="movie" ng-controller="movieController">
+	<section ng-repeat="sect in json.swiper" on-finish-render="ngRepeatFinished">
+		<hgroup class="title">
+			<h2>{{sect.headline}}</h2>
+			<a class="more" href="javascript:;">更多</a>
+		</hgroup>
+		<div class="swiper-container rank{{$index+1}}">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide movie-box" ng-repeat="list in sect.rank">
+					<a href="javascript:;">
+						<div class="cover" style="background-image: url({{list.cover}});"></div>
+						<h3>{{list.title}}</h3>
+						<div class="rank">
+							<span class="star">
+								<i class="rating-star star-full"></i>
+								<i class="rating-star star-full"></i>
+								<i class="rating-star star-full"></i>
+								<i class="rating-star star-gray"></i>
+								<i class="rating-star star-gray"></i>
+							</span>
+							<span>{{list.star}}</span>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<hgroup class="title">
+			<h2>{{json.findMovie.title}}</h2>
+		</hgroup>
+		<div class="swiper-container find-movie">
+	        <div class="swiper-wrapper">
+	            <div class="swiper-slide tags-box">
+	            		<ul>
+	            			<li ng-repeat="list in json.findMovie.list1"><a ng-style="rndColor" href='javascript:;'>{{list}}</a></li>
+	            		</ul>
+	            		<ul>
+	            			<li ng-repeat="list in json.findMovie.list2"><a ng-style="rndColor" href='javascript:;'>{{list}}</a></li>
+	            		</ul>
+	            	</div>
+	        </div>
+	   </div>
+	</section>
+	<section>
+		<hgroup class="title">
+			<h2>{{json.catMenu.title}}</h2>
+		</hgroup>
+		<nav class="category">
+			<ul>
+				<li ng-repeat="list in json.catMenu.list">
+					<a href="javascript:;">{{list}}<i></i></a>
+				</li>
+			</ul>
+		</nav>
+	</section>
+</div>

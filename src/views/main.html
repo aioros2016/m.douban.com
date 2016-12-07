@@ -1,0 +1,41 @@
+<div class="main">
+	<section class="quick-nav">
+		<ul>
+			<li><a href="#">影院热映</a></li>
+			<li><a href="#">生活在别处</a></li>
+			<li><a href="#">没能说出口的感谢</a></li>
+			<li><a href="#">使用豆瓣App</a></li>
+		</ul>
+	</section>
+	<section class="art-list" ng-controller="mainController">
+		<ul>
+			<li ng-repeat="item in arr">
+				<a href="javascript:;">
+					<div class="top">
+						<div class="user">
+							<span class="face" style="position: relative; background: url({{item.face}}) center center / cover no-repeat rgb(250, 250, 250);">
+								<span></span>
+							</span>
+							<span class="name">{{item.name}}</span>
+						</div>
+						<div class="tag"><i>{{item.tag}}</i></div>
+					</div>
+					<div class="center">
+						<div ng-hide="item.cover == '' ? true : false" class="img" style="position: relative; background: url({{item.cover}}) center center / cover no-repeat rgb(250, 250, 250);">
+							<div></div>
+						</div>
+						<h3>{{item.title}}</h3>
+						<p>{{item.cont}}</p>
+						
+					</div>
+					<div class="bottom">
+						<span class="like icon-box">{{item.like}}</span>
+					</div>
+				</a>
+			</li>
+		</ul>
+		<div class="bottom-box" ng-hide="page == pageLen ? true : false">
+			<div class="show-more" ng-click="loadPage()">显示更多内容</div>
+		</div>
+	</section>
+</div>

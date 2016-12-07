@@ -7,7 +7,12 @@
 		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 		<title>豆瓣（手机版）</title>
 		<link rel="stylesheet" href="css/swiper.min.css">
-		<link rel="stylesheet" href="css/style.min.css">
+		<!--build:css css/style.min.css -->
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+		<!-- endbuild -->
+		<link rel="stylesheet/less" type="text/css" href="less/style.less" />
+		<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
 	</head>
 	<body class="{{showPop?'':'hidden'}}">
 		<div class="container">
@@ -144,6 +149,13 @@
 		<script src="//cdn.bootcss.com/angular.js/1.5.8/angular.min.js"></script>
 		<script src="//cdn.bootcss.com/angular.js/1.5.8/angular-route.min.js"></script>
 		<script src="js/swiper.min.js"></script>
-		<script src="controllers/controllers.min.js"></script>
+		<!--build:js controllers/controllers.min.js -->
+		<script src="controllers/index.js"></script>
+		<script src="controllers/main.js"></script>
+		<script src="controllers/movie.js"></script>
+		<script src="controllers/book.js"></script>
+		<script src="controllers/radio.js"></script>
+		<script src="controllers/team.js"></script>
+		<!-- endbuild -->
 	</body>
 </html>

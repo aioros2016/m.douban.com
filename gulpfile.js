@@ -32,21 +32,28 @@ gulp.task('watch', function (){
 
 gulp.task('docmin', function(){
 	return gulp.src('src/*.html')
-		
-		.pipe(gulpIf('controllers/*.js',uglify()))
-		.pipe(gulpIf('css/*.css',cleanCSS()))
+//		.pipe(gulpIf('controllers/*.js',uglify()))
+//		.pipe(gulpIf('css/*.css',cleanCSS()))
 		.pipe(useref())
 		.pipe(gulp.dest('dist'))
 });
 
 gulp.task('cssmin', function () {
-    gulp.src('src/css/*.css')
+    gulp.src('dist/css/style.min.css')
         .pipe(cleanCSS())
         .pipe(gulp.dest('dist/css'));
 });
 
+gulp.task('jsmin', function () {
+    gulp.src('dist/controllers/controllers.min.js')
+        .pipe(uglify({
+        		mangle: false
+        }))
+        .pipe(gulp.dest('dist/controllers'));
+});
+
 gulp.task('build', function (callback) {
-	runSequence('less', 'docmin',
+	runSequence('less', 'docmin', 'cssmin', 'jsmin',
 	    callback
 	)
 })

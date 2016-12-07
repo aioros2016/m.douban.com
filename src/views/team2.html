@@ -1,0 +1,48 @@
+<div class="team" ng-controller="teamController">
+	<section>
+		<h2>{{header.headline}}</h2>
+		<div class="note-list">
+			<ul>
+				<li ng-repeat="item in list">
+					<a href="javascript:;">
+						<div class="title">
+							<img class="group-icon" ng-src="https://img3.doubanio.com/icon/{{item.face}}.jpg" />
+							<h3>{{item.title}}</h3>
+							<em>{{item.num}}</em>
+						</div>
+						<div class="content">
+							<span class="time">{{getDateDiff(item.time)}}：</span>
+							<p>{{item.content}}</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="to-more">
+			<a href="javascript:;">更多相关小组</a>
+		</div>
+	</section>
+	<section>
+		<h2>{{header2.headline}}</h2>
+		<div class="note-list">
+			<ul>
+				<li ng-repeat="item in list2">
+					<a href="javascript:;">
+						<div class="title">
+							<img class="group-icon" ng-src="https://img3.doubanio.com/icon/{{item.face}}.jpg" />
+							<h3>{{item.title}}</h3>
+							<em>{{item.num}}人</em>
+						</div>
+						<div class="content">
+							<span class="time">{{getDateDiff(item.time)}}</span>
+							<p>{{item.content}}</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="to-more">
+			<a href="javascript:;">更多相关小组</a>
+		</div>
+	</section>
+</div>
