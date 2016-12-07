@@ -1,0 +1,162 @@
+{
+	"swiper": [
+		{
+			"headline": "影院热映",
+			"rank": [
+				{
+			    		"cover": "https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2392444121.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg",
+			    		"title": "神奇动物去哪儿",
+			    		"star": 8.2
+			    },
+			    {
+			    		"cover": "https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2397960879.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg",
+			    		"title": "海洋奇缘",
+			    		"star": 8.1
+			    },
+			    {
+			    		"cover": "https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2378133884.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg",
+			    		"title": "我不是潘金莲",
+			    		"star": 7.6
+			    },
+			    {
+			    		"cover": "https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2398143099.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg",
+			    		"title": "名侦探柯南：纯黑的恶梦",
+			    		"star": 6.7
+			    },
+			    {
+			    		"cover": "https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2388501883.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg",
+			    		"title": "奇异博士",
+			    		"star": 6.6
+			    },
+			    {
+			    		"cover": "https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2394867674.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg",
+			    		"title": "冲天火",
+			    		"star": 6.1
+			    },
+			    {
+			    		"cover": "https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2391542403.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg",
+			    		"title": "比利·林恩的中场战事",
+			    		"star": 5.9
+			    }
+			]
+		},
+		{
+			"headline": "免费在线观影",
+			"rank": [
+				{
+			    		"cover": "https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2392444121.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg",
+			    		"title": "2神奇动物去哪儿",
+			    		"star": 8.2
+			    },
+			    {
+			    		"cover": "https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2397960879.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg",
+			    		"title": "2海洋奇缘",
+			    		"star": 8.1
+			    },
+			    {
+			    		"cover": "https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2378133884.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg",
+			    		"title": "2我不是潘金莲",
+			    		"star": 7.6
+			    },
+			    {
+			    		"cover": "https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2398143099.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg",
+			    		"title": "2名侦探柯南：纯黑的恶梦",
+			    		"star": 6.7
+			    },
+			    {
+			    		"cover": "https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2388501883.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg",
+			    		"title": "2奇异博士",
+			    		"star": 6.6
+			    },
+			    {
+			    		"cover": "https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2394867674.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg",
+			    		"title": "2冲天火",
+			    		"star": 6.1
+			    },
+			    {
+			    		"cover": "https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2391542403.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg",
+			    		"title": "2比利·林恩的中场战事",
+			    		"star": 5.9
+			    }
+			]
+		},
+		{
+			"headline": "新片速递",
+			"rank": [
+				{
+			    		"cover": "https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2392444121.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg",
+			    		"title": "3神奇动物去哪儿",
+			    		"star": 8.2
+			    },
+			    {
+			    		"cover": "https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2397960879.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg",
+			    		"title": "3海洋奇缘",
+			    		"star": 8.1
+			    },
+			    {
+			    		"cover": "https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2378133884.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg",
+			    		"title": "3我不是潘金莲",
+			    		"star": 7.6
+			    },
+			    {
+			    		"cover": "https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2398143099.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg",
+			    		"title": "3名侦探柯南：纯黑的恶梦",
+			    		"star": 6.7
+			    },
+			    {
+			    		"cover": "https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2388501883.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg",
+			    		"title": "3奇异博士",
+			    		"star": 6.6
+			    },
+			    {
+			    		"cover": "https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2394867674.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg",
+			    		"title": "3冲天火",
+			    		"star": 6.1
+			    },
+			    {
+			    		"cover": "https://qnmob.doubanio.com/view/movie_poster_cover/lpst/public/p2391542403.jpg?imageView2/0/q/80/w/9999/h/300/format/jpg",
+			    		"title": "3比利·林恩的中场战事",
+			    		"star": 5.9
+			    }
+			]
+		}
+	],
+	"findMovie": {
+		"title": "发现好电影",
+		"list1": [
+	    		"同时入选IMDB250和豆瓣电影250的电影",
+	      	"带你进入不正常的世界",
+	    		"用电【影】来祭奠逝去的岁月",
+	    		"女孩们的故事【电影】女孩们的故事【电影】"
+	    ],
+	    "list2": [
+	    		"科幻是未来的钥匙——科幻启示录【科幻题材】",
+	      	"美国生活面面观",
+	    		"2015终极期待",
+	    		"经典韩国电影——收集100部"
+	    ]
+	},
+	"catMenu": {
+		"title": "分类浏览",
+		"list": [
+	    		"经典",
+	      	"冷门佳片",
+	    		"豆瓣高分",
+	    		"动作",
+	    		"喜剧",
+	    		"爱情",
+	    		"悬疑",
+	    		"恐怖",
+	    		"科幻",
+	    		"治愈",
+	    		"文艺",
+	    		"成长",
+	    		"动画",
+	    		"华语",
+	    		"欧美",
+	    		"韩国",
+	    		"日本",
+	    		""
+	    ]
+	}
+}

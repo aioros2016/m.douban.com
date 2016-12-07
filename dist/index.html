@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html ng-app="singlePage" class="{{showPop?'':'hidden'}}" ng-controller="indexController">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="robots" content="all">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<title>豆瓣（手机版）</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/swiper.min.css">
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body class="{{showPop?'':'hidden'}}">
+		<div class="container">
+			<header class="header">
+				<div class="logo">
+					<h1><a href="#/main">豆瓣</a></h1>
+				</div>
+				<nav class="nav">
+					<ul>
+						<li><a href="#/movie">电影</a></li>
+						<li><a href="#/book">图书</a></li>
+						<li><a href="#/radio">广播</a></li>
+						<li><a href="#/team">小组</a></li>
+					</ul>
+					<span class="search" ng-click="showPop=false">搜索</span>
+				</nav>
+			</header>
+			<article class="page">
+				<ng-view></ng-view>
+			</article>
+			<footer class="footer">
+				<figure class="slogan">
+					<img src="https://img3.doubanio.com/f/talion/7837f29dd7deab9416274ae374a59bc17b5f33c6/pics/card/douban-app-logo.png" width="48">
+					<figcaption>
+						<strong>豆瓣</strong>
+						<p>我们的精神角落</p>
+					</figcaption>
+				</figure>
+				<div class="link2ios">
+					<a href="javascript:;">免费下载 iOS / Android 版客户端</a>
+				</div>
+			</footer>
+			<div class="search-box ng-cloak" ng-hide="showPop" ng-cloak>
+				<div class="top-bar">
+					<a href="javascript:;" ng-click="showPop=true">关闭</a>
+					<form class="search-input">
+						<input type="search" ng-style="iconSearch" ng-focus="iconSearch={'background-color': '#f3f3f3'}" ng-blur="iconSearch={'background': 'url(../img/search2.png) no-repeat 50% #f3f3f3','background-color': '#f3f3f3','background-size':'auto 70%'}" />
+					</form>
+				</div>
+				<div class="menu-box">
+					<ul>
+						<li>
+							<a href="javascript:;" >
+								<strong>电影</strong>
+								<span>影院热映</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<strong>电视</strong>
+								<span>正在热播</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<strong>图书</strong>
+								<span>畅销排行</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<strong>同城</strong>
+								<span>周末活动</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<strong>小组</strong>
+								<span>志趣相投</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<strong>音乐</strong>
+								<span>新碟榜</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<strong>阅读</strong>
+								<span>电子书</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<strong>游戏</strong>
+								<span>虚拟世界</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<strong>应用</strong>
+								<span>玩手机</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<strong>东西</strong>
+								<span>心爱之物</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<strong>FM</strong>
+								<span>红心歌单</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<strong>市集</strong>
+								<span>购买原创</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="quick-menu">
+					<ul>
+						<li>
+							<a href="#">注册账号</a>
+						</li>
+						<li>
+							<a href="#">登录豆瓣</a>
+						</li>
+						<li>
+							<a href="#">桌面版网站</a>
+						</li>
+						<li>
+							<a href="#">使用豆瓣App</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src="//cdn.bootcss.com/angular.js/1.5.8/angular.min.js"></script>
+		<script src="//cdn.bootcss.com/angular.js/1.5.8/angular-route.min.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script src="controllers/controllers.min.js"></script>
+	</body>
+</html>

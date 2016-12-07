@@ -1,0 +1,42 @@
+<div class="radio" ng-controller="radioController">
+	<section class="sendRadio">
+		<div class="left">
+			<a href="javascript:;">
+				<span class="face">
+					<img src="https://img1.doubanio.com/icon/user_normal.jpg" alt="未登陆">
+				</span>
+				<span class="txt">登录发广播</span>
+			</a>
+		</div>
+		<div class="right">
+			<div class="icon icon-camera"></div>
+			<div class="icon icon-pen"></div>
+		</div>
+	</section>
+	<section class="diary-list">
+		<ul>
+			<li ng-repeat="item in list">
+				<a href="javascript:;">
+					<div class="top">
+						<div class="face">
+							<img ng-src="https://img5.doubanio.com/icon/{{item.face}}.jpg" alt="豆瓣" />
+						</div>
+						<div class="author">
+							<span><strong>{{item.author}}</strong>写了日记</span>
+							<span class="time">{{item.time | date:'yyyy-MM-dd HH:mm:ss'}}</span>
+						</div>
+					</div>
+					<div class="content-box">
+						<h3>{{item.title}}</h3>
+						<p>{{item.content}}</p>
+					</div>
+					<div class="info">
+						<div class="icon icon-like"><em>{{item.like}}</em></div>
+						<div class="icon icon-comment"><em>{{item.comment}}</em></div>
+						<div class="icon icon-retweet"><em>{{item.retweet}}</em></div>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</section>
+</div>
