@@ -1,6 +1,6 @@
-<div class="team" ng-controller="teamController">
+<div class="team" ng-controller="teamController" ontouchstart="">
 	<section ng-repeat="box in arr">
-		<h2>{{item.headline}}</h2>
+		<h2>{{box.headline}}</h2>
 		<div class="note-list">
 			<ul>
 				<li ng-repeat="item in box.list">

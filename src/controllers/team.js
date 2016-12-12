@@ -20,21 +20,21 @@ angular.module('teamMod', [])
 		var hourC = diffValue/hour;
 		var minC = diffValue/minute;
 		if(monthC>=1){
-			result="" + parseInt(monthC) + "月前更新：";
+			result="" + parseInt(monthC) + "月前更新";
 		}
 		else if(weekC>=1){
-			result="" + parseInt(weekC) + "周前更新：";
+			result="" + parseInt(weekC) + "周前更新";
 		}
 		else if(dayC>=1){
-			result=""+ parseInt(dayC) +"天前更新：";
+			result=""+ parseInt(dayC) +"天前更新";
 		}
 		else if(hourC>=1){
-			result=""+ parseInt(hourC) +"小时前更新：";
+			result=""+ parseInt(hourC) +"小时前更新";
 		}
 		else if(minC>=1){
-			result=""+ parseInt(minC) +"分钟前更新：";
+			result=""+ parseInt(minC) +"分钟前更新";
 		}else{
-			result="刚刚更新：";
+			result="刚刚更新";
 		};
 		return result;
 	};

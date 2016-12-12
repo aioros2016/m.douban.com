@@ -1,3 +1,11 @@
+if ('addEventListener' in document) {
+    document.addEventListener('DOMContentLoaded', function() {
+        FastClick.attach(document.body);
+    }, false);
+};
+
+document.body.addEventListener('touchstart',function(){},false);
+
 angular.module('singlePage', ["ngRoute","mainMod","movieMod","bookMod","radioMod","teamMod"])
 .config(['$routeProvider', function ($routeProvider){
 	$routeProvider.when(
