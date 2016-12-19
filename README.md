@@ -3,7 +3,7 @@
 
 <h3>在线地址</h3>
 <pre>http://test11.cdgzy.com/douban/</pre>
-您也可以通过手机扫描二维码来访问<br />
+您也可以通过手机扫描二维码来访问（FTP更新不及时，目前通过扫码和在线地址访问的将是旧版本，查看新版本还是请下载压缩包）<br />
 ![扫描二维码](https://github.com/aioros2016/m.douban.com/blob/master/dist/img/code.png)
 
 <h3>更新与2016年12月20日</h3>
