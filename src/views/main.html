@@ -1,4 +1,4 @@
-<div class="main" ontouchstart="">
+<div id="top" class="main" ontouchstart="">
 	<section class="quick-nav">
 		<ul>
 			<li><a href="javascript:;">影院热映</a></li>
@@ -10,7 +10,7 @@
 	<section class="art-list" ng-controller="mainController">
 		<ul>
 			<li ng-repeat="item in arr">
-				<a href="javascript:;">
+				<a ng-href="#/detail/{{item.articleId}}" ng-click="gotop()">
 					<div class="top">
 						<div class="user">
 							<span class="face" style="position: relative; background: url({{item.face}}) center center / cover no-repeat rgb(250, 250, 250);">

@@ -8,7 +8,7 @@
 			<div class="swiper-wrapper">
 				<div class="swiper-slide movie-box" ng-repeat="list in sect.rank">
 					<a href="javascript:;">
-						<div class="cover" style="background-image: url({{list.cover}});"></div>
+						<div class="cover" style="background-image: url(https://{{list.domain}}.doubanio.com/lpic/{{list.cover}}.jpg);"></div>
 						<h3>{{list.title}}</h3>
 						<div class="rank">
 							<span class="star">
@@ -32,7 +32,7 @@
 		</hgroup>
 		<figure class="recommend">
 			<a href="javascript:;">
-				<img class="cover" ng-src="img/{{json.swiper2.cover}}.jpg" width="100">
+				<img class="cover" ng-src="https://img3.doubanio.com/view/freyr_page_photo/raw/public/{{json.swiper2.cover}}.jpg" width="100">
 				<figcaption class="info">
 					<div class="title">
 						<strong>{{json.swiper2.title}}</strong>
@@ -46,7 +46,7 @@
 			<div class="swiper-wrapper">
 				<div class="swiper-slide movie-box" ng-repeat="list in json.swiper2.rank">
 					<a href="javascript:;">
-						<div class="cover" style="background-image: url({{list.cover}});"></div>
+						<div class="cover" style="background-image: url(https://{{list.domain}}.doubanio.com/view/freyr_page_photo/raw/public/{{list.cover}}.jpg);"></div>
 						<h3>{{list.title}}</h3>
 						<div class="rank">
 							<span>{{list.price | currency:"¥"}}</span>

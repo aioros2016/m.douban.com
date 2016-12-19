@@ -1,0 +1,16 @@
+<div class="detail" ng-controller="detailController" ontouchstart="">
+	<section class="art-detail">
+		<div class="title">
+			<h2>{{detail.title}}</h2>
+			<div class="info">{{detail.author}}<span>{{detail.time|date:'yyyy-MM-dd'}}</span></div>
+		</div>
+		<div class="bdsharebuttonbox" data-tag="share_1">
+			<a class="bds_weixin" data-cmd="weixin"></a>
+			<a class="bds_sqq" data-cmd="sqq" href="#"></a>
+			<a class="bds_tsina" data-cmd="tsina"></a>
+		</div>
+		<div class="content-box" showfull="">
+		</div>
+		<div class="show-full" ng-click="showfull=!showfull" ng-hide="showfull">显示更多</div>
+	</section>
+</div>

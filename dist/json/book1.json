@@ -4,37 +4,44 @@
 			"headline": "最受关注图书｜虚构类",
 			"rank": [
 				{
-			    		"cover": "https://img3.doubanio.com/lpic/s29054611.jpg",
+					"domain": "img3",
+			    		"cover": "s29054611",
 			    		"title": "不正常人类症候群",
 			    		"star": 8.2
 			    },
 			    {
-			    		"cover": "https://img1.doubanio.com/lpic/s29012369.jpg",
+			    		"domain": "img1",
+			    		"cover": "s29012369",
 			    		"title": "无人生还",
 			    		"star": 8.1
 			    },
 			    {
-			    		"cover": "https://img1.doubanio.com/lpic/s29087859.jpg",
+			    		"domain": "img1",
+			    		"cover": "s29087859",
 			    		"title": "我不知道该如何像正常人那样生活",
 			    		"star": 7.6
 			    },
 			    {
-			    		"cover": "https://img3.doubanio.com/lpic/s29132851.jpg",
+			    		"domain": "img3",
+			    		"cover": "s29132851",
 			    		"title": "漫长的中场休息",
 			    		"star": 6.7
 			    },
 			    {
-			    		"cover": "https://img3.doubanio.com/lpic/s29087840.jpg",
+			    		"domain": "img3",
+			    		"cover": "s29087840",
 			    		"title": "第十三天",
 			    		"star": 6.6
 			    },
 			    {
-			    		"cover": "https://img1.doubanio.com/lpic/s28872219.jpg",
+			    		"domain": "img1",
+			    		"cover": "s28872219",
 			    		"title": "不属于我们的世纪",
 			    		"star": 6.1
 			    },
 			    {
-			    		"cover": "https://img3.doubanio.com/lpic/s29051355.jpg",
+			    		"domain": "img3",
+			    		"cover": "s29051355",
 			    		"title": "北鸢",
 			    		"star": 5.9
 			    }
@@ -44,37 +51,44 @@
 			"headline": "最受关注图书｜非虚构类",
 			"rank": [
 				{
-			    		"cover": "https://img3.doubanio.com/lpic/s29054611.jpg",
+					"domain": "img3",
+			    		"cover": "s29054611",
 			    		"title": "不正常人类症候群",
 			    		"star": 8.2
 			    },
 			    {
-			    		"cover": "https://img1.doubanio.com/lpic/s29012369.jpg",
+			    		"domain": "img1",
+			    		"cover": "s29012369",
 			    		"title": "无人生还",
 			    		"star": 8.1
 			    },
 			    {
-			    		"cover": "https://img1.doubanio.com/lpic/s29087859.jpg",
+			    		"domain": "img1",
+			    		"cover": "s29087859",
 			    		"title": "我不知道该如何像正常人那样生活",
 			    		"star": 7.6
 			    },
 			    {
-			    		"cover": "https://img3.doubanio.com/lpic/s29132851.jpg",
+			    		"domain": "img3",
+			    		"cover": "s29132851",
 			    		"title": "漫长的中场休息",
 			    		"star": 6.7
 			    },
 			    {
-			    		"cover": "https://img3.doubanio.com/lpic/s29087840.jpg",
+			    		"domain": "img3",
+			    		"cover": "s29087840",
 			    		"title": "第十三天",
 			    		"star": 6.6
 			    },
 			    {
-			    		"cover": "https://img1.doubanio.com/lpic/s28872219.jpg",
+			    		"domain": "img1",
+			    		"cover": "s28872219",
 			    		"title": "不属于我们的世纪",
 			    		"star": 6.1
 			    },
 			    {
-			    		"cover": "https://img3.doubanio.com/lpic/s29051355.jpg",
+			    		"domain": "img3",
+			    		"cover": "s29051355",
 			    		"title": "北鸢",
 			    		"star": 5.9
 			    }
@@ -83,43 +97,50 @@
 	],
 	"swiper2": {
 		"headline": "豆瓣纸书",
-		"cover": "1117",
+		"cover": "1213",
 		"title": "生活的哲学",
 		"price": "¥ 48",
 		"content": "12堂练习美好生活的哲学课，人生旅途的医药箱，让古希腊的智慧照看我们的灵魂。",
 		"rank": [
 			{
-		    		"cover": "img/1048.jpg",
+				"domain": "img1",
+		    		"cover": "1048",
 		    		"title": "寂然的狂喜",
 		    		"price": 98
 		    },
 		    {
-		    		"cover": "img/1003.jpg",
+		    		"domain": "img3",
+		    		"cover": "1003",
 		    		"title": "猫的私人词典",
 		    		"price": 78
 		    },
 		    {
-		    		"cover": "img/986.jpg",
+		    		"domain": "img1",
+		    		"cover": "986",
 		    		"title": "人人都有妄想症",
 		    		"price": 32
 		    },
 		    {
-		    		"cover": "img/987.jpg",
+		    		"domain": "img1",
+		    		"cover": "987",
 		    		"title": "画框里的男人装",
 		    		"price": 38
 		    },
 		    {
-		    		"cover": "img/990.jpg",
+		    		"domain": "img1",
+		    		"cover": "990",
 		    		"title": "伍迪·艾伦谈话录",
 		    		"price": 68
 		    },
 		    {
-		    		"cover": "img/813.jpg",
+		    		"domain": "img1",
+		    		"cover": "813",
 		    		"title": "画在人心的苦闷上",
 		    		"price": 58
 		    },
 		    {
-		    		"cover": "img/800.jpg",
+		    		"domain": "img1",
+		    		"cover": "800",
 		    		"title": "驾驶圣经",
 		    		"price": 10
 		    }
