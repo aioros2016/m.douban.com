@@ -3,6 +3,7 @@ var less        = require('gulp-less');
 var browserSync = require('browser-sync').create();
 var useref      = require('gulp-useref');
 var uglify      = require('gulp-uglify');
+var ngAnnotate  = require('gulp-ng-annotate');
 var gulpIf      = require('gulp-if');
 var cleanCSS    = require('gulp-clean-css');
 var runSequence = require('run-sequence');
@@ -44,16 +45,20 @@ gulp.task('cssmin', function () {
         .pipe(gulp.dest('dist/css'));
 });
 
+gulp.task('ngmin', function () {
+    return gulp.src('src/controllers/*.js')
+        .pipe(ngAnnotate({single_quotes: true}))
+        .pipe(gulp.dest('src/controllers'));
+});
+
 gulp.task('jsmin', function () {
     gulp.src('dist/controllers/controllers.min.js')
-        .pipe(uglify({
-        		mangle: false
-        }))
+        .pipe(uglify())
         .pipe(gulp.dest('dist/controllers'));
 });
 
 gulp.task('build', function (callback) {
-	runSequence('less', 'docmin', 'cssmin', 'jsmin',
+	runSequence('less', 'ngmin', 'docmin', 'cssmin', 'jsmin',
 	    callback
 	)
 })

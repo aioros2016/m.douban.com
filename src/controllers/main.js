@@ -1,5 +1,5 @@
 angular.module('mainMod', [])
-.controller('mainController', function ($scope, $http, $location, $anchorScroll){
+.controller('mainController', ['$scope', '$http', '$location', '$anchorScroll', function ($scope, $http, $location, $anchorScroll){
 	$scope.page = 1;
 	$scope.pageLen = 3;
 	$scope.arr = [];
@@ -24,4 +24,4 @@ angular.module('mainMod', [])
 		$location.hash('top');
 		$anchorScroll();
     };
-});
+}]);

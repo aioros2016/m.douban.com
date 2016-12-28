@@ -1,5 +1,5 @@
 angular.module('movieMod', [])
-.controller('movieController', function($scope, $http) {
+.controller('movieController', ['$scope', '$http', function($scope, $http) {
 	$http.get('json/movie1.json').success(function(res){
 		$scope.json = res;
 		$scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
@@ -36,4 +36,4 @@ angular.module('movieMod', [])
 	}).error(function(){
 		alert("载入失败");
 	});
-});
+}]);

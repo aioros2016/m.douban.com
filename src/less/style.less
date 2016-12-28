@@ -4,7 +4,7 @@
 .icon-box { display: inline-block; margin: 10px 15px 0 0; font-size: 12px; color: #d4d4d4;}
 .inline-close { letter-spacing: -3px; font-size: 0;}
 @active-bg : #f8f8f8;
-.hidden { overflow: hidden;}
+.locking { overflow: hidden;}
 .ng-cloak { display:none;}
 .icon-share { background-size: cover; background-position: 0 0;}
 
@@ -335,6 +335,7 @@ body { color: #111; font-size: 12px; font-family: "Helvetica Neue",Helvetica,Rob
             a {
                 overflow: hidden;
                 display: block;
+                text-decoration: none;
                 .top {
                     .inline-close;
                     .face {
@@ -365,15 +366,15 @@ body { color: #111; font-size: 12px; font-family: "Helvetica Neue",Helvetica,Rob
                     }
                 }
                 .content-box {
-                    float: right;
                     margin: 10px 0 20px 50px;
                     border: solid 0.5px #d8d8d8;
                     border-radius: 3px;
                     padding: 15px;
                     h3 { overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; margin-bottom: 5px; color: #494949; font-size: 17px; font-weight: bold; line-height: 1.4;}
-                    p { overflow: hidden; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 3; -webkit-box-orient: vertical; color: #aaa; font-size: 12px; line-height: 16px;}
+                    p { overflow: hidden; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 3; -webkit-box-orient: vertical; color: #aaa; font-size: 12px; line-height: 16px; word-wrap: break-word;}
                 }
                 .info {
+                    clear: both;
                     margin-left: 50px;
                     .inline-close;
                     .icon {
@@ -381,6 +382,7 @@ body { color: #111; font-size: 12px; font-family: "Helvetica Neue",Helvetica,Rob
                         margin-right: 20px;
                         font-size: 14px;
                         cursor: pointer;
+                        letter-spacing: normal;
                         &.icon-like:before { background-image: url(https://img3.doubanio.com/f/talion/7a0756b3b6e67b59ea88653bc0cfa14f61ff219d/pics/card/ic_like_gray.svg);}
                         &.icon-comment:before { background-image: url(https://img3.doubanio.com/f/talion/ac8a7e0d5f471480549c7abf45fc0fa4c3b4184f/pics/card/ic_comment.svg);}
                         &.icon-retweet:before { background-image: url(https://img3.doubanio.com/f/talion/8604ef3950b947d55406e2a6f5cf6ca7f0b934e3/pics/card/ic_retweet_gray.svg);}
@@ -392,6 +394,63 @@ body { color: #111; font-size: 12px; font-family: "Helvetica Neue",Helvetica,Rob
             }
         }
         li:after { position: absolute; left: 46px; bottom: 0; width: 100%; height: 1px; background: #E8E8E8; -webkit-transform: scaleY(0.5); content: ''; -webkit-transform-origin: 0 bottom;}
+    }
+    .pop-note {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        box-sizing: border-box;
+        .title {
+            overflow: hidden;
+            border-bottom: #E8E8E8 solid 1px;
+            font-size: 17px;
+            cursor: pointer;
+            padding: 14px 0;
+            .cancel { position: relative; z-index: 2; float: left; padding: 0 18px; color: #42bd56;}
+            h2 { position: absolute; left: 0; top: 0; width: 100%; padding: inherit; text-align: center;}
+            .send {
+                position: relative;
+                z-index: 2;
+                float: right;
+                padding: 0 18px;
+                color: #ccc;
+                &.on { color: #42bd56;}
+            }
+        }
+        .text-area {
+            border-bottom: #E8E8E8 solid 1px;
+            padding: 18px;
+            .input-wapper {
+                overflow-x: hidden;
+                overflow-y: auto;
+                height: 150px;
+                font-size: 17px;
+                line-height: 1.5;
+                color: #494949;
+                outline: none;
+                -webkit-user-modify: read-write;
+                -webkit-user-select: text;
+                &[contenteditable=plaintext-only]:empty::before { content: attr(placeholder); display: block; color: #ccc;}
+                div { -webkit-user-modify: read-write;}
+            }
+        }
+        .tools-box {
+            overflow: hidden;
+            border-bottom: #E8E8E8 solid 1px;
+            padding: 10px 18px;
+            .font-count {
+                float: right;
+                color: #aaa;
+                font-size: 15px;
+                line-height: 24px;
+                text-align: right;
+                &.warning { color: #ff3f51;}
+            }
+        }
     }
 }
 

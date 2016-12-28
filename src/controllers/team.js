@@ -1,5 +1,5 @@
 angular.module('teamMod', [])
-.controller('teamController', function ($scope, $http){
+.controller('teamController', ['$scope', '$http', function ($scope, $http){
 	$http.get('json/team1.json').success(function(res){
 		$scope.arr = res;
 	}).error(function(){
@@ -38,4 +38,4 @@ angular.module('teamMod', [])
 		};
 		return result;
 	};
-});
+}]);

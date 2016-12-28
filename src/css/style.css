@@ -23,7 +23,7 @@
   letter-spacing: -3px;
   font-size: 0;
 }
-.hidden {
+.locking {
   overflow: hidden;
 }
 .ng-cloak {
@@ -643,6 +643,7 @@ body {
 .radio .diary-list li a {
   overflow: hidden;
   display: block;
+  text-decoration: none;
 }
 .radio .diary-list li a .top {
   letter-spacing: -3px;
@@ -682,7 +683,6 @@ body {
   font-size: 14px;
 }
 .radio .diary-list li a .content-box {
-  float: right;
   margin: 10px 0 20px 50px;
   border: solid 0.5px #d8d8d8;
   border-radius: 3px;
@@ -709,8 +709,10 @@ body {
   color: #aaa;
   font-size: 12px;
   line-height: 16px;
+  word-wrap: break-word;
 }
 .radio .diary-list li a .info {
+  clear: both;
   margin-left: 50px;
   letter-spacing: -3px;
   font-size: 0;
@@ -720,6 +722,7 @@ body {
   margin-right: 20px;
   font-size: 14px;
   cursor: pointer;
+  letter-spacing: normal;
 }
 .radio .diary-list li a .info .icon.icon-like:before {
   background-image: url(https://img3.doubanio.com/f/talion/7a0756b3b6e67b59ea88653bc0cfa14f61ff219d/pics/card/ic_like_gray.svg);
@@ -756,6 +759,86 @@ body {
   -webkit-transform: scaleY(0.5);
   content: '';
   -webkit-transform-origin: 0 bottom;
+}
+.radio .pop-note {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  box-sizing: border-box;
+}
+.radio .pop-note .title {
+  overflow: hidden;
+  border-bottom: #E8E8E8 solid 1px;
+  font-size: 17px;
+  cursor: pointer;
+  padding: 14px 0;
+}
+.radio .pop-note .title .cancel {
+  position: relative;
+  z-index: 2;
+  float: left;
+  padding: 0 18px;
+  color: #42bd56;
+}
+.radio .pop-note .title h2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: inherit;
+  text-align: center;
+}
+.radio .pop-note .title .send {
+  position: relative;
+  z-index: 2;
+  float: right;
+  padding: 0 18px;
+  color: #ccc;
+}
+.radio .pop-note .title .send.on {
+  color: #42bd56;
+}
+.radio .pop-note .text-area {
+  border-bottom: #E8E8E8 solid 1px;
+  padding: 18px;
+}
+.radio .pop-note .text-area .input-wapper {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 150px;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #494949;
+  outline: none;
+  -webkit-user-modify: read-write;
+  -webkit-user-select: text;
+}
+.radio .pop-note .text-area .input-wapper[contenteditable=plaintext-only]:empty::before {
+  content: attr(placeholder);
+  display: block;
+  color: #ccc;
+}
+.radio .pop-note .text-area .input-wapper div {
+  -webkit-user-modify: read-write;
+}
+.radio .pop-note .tools-box {
+  overflow: hidden;
+  border-bottom: #E8E8E8 solid 1px;
+  padding: 10px 18px;
+}
+.radio .pop-note .tools-box .font-count {
+  float: right;
+  color: #aaa;
+  font-size: 15px;
+  line-height: 24px;
+  text-align: right;
+}
+.radio .pop-note .tools-box .font-count.warning {
+  color: #ff3f51;
 }
 /* 小组 */
 .team {

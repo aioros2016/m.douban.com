@@ -25,7 +25,7 @@ angular.module('detailMod', [])
 		template:
 		'<div class="content-box" style="height: {{showfull?\'auto\':\'60em\'}};">\
 			<div class="text" ng-bind-html="detail.content|showAsHtml"></div>\
-			<div class="likes" ng-click="iLike()">{{s}}</div>\
+			<div class="likes " ng-click="iLike()">{{s}}</div>\
 		</div>'
 	};
 });

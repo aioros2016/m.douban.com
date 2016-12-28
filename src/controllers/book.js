@@ -1,5 +1,5 @@
 angular.module('bookMod', [])
-.controller('bookController', function ($scope, $http){
+.controller('bookController', ['$scope', '$http', function ($scope, $http){
 	$http.get('json/book1.json').success(function(res){
 		$scope.json = res;
 		
@@ -37,4 +37,4 @@ angular.module('bookMod', [])
 	}).error(function(){
 		alert("载入失败");
 	});
-});
+}]);

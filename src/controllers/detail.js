@@ -1,5 +1,5 @@
 angular.module('detailMod', [])
-.controller('detailController', function ($scope, $http, $routeParams){
+.controller('detailController', ['$scope', '$http', '$routeParams', function ($scope, $http, $routeParams){
 	$scope.storage = window.localStorage;
 	$scope.articleId = $routeParams.articleId;
 	$scope.detail = [];
@@ -18,14 +18,14 @@ angular.module('detailMod', [])
 		$scope.s++;
 		$scope.storage.setItem("likes"+$scope.articleId, parseInt($scope.s));
 	};
-}).directive('showfull', function (){
+}]).directive('showfull', function (){
 	return {
 		restrict: 'A',
 		replace: true,
 		template:
 		'<div class="content-box" style="height: {{showfull?\'auto\':\'60em\'}};">\
 			<div class="text" ng-bind-html="detail.content|showAsHtml"></div>\
-			<div class="likes" ng-click="iLike()">{{s}}</div>\
+			<div class="likes " ng-click="iLike()">{{s}}</div>\
 		</div>'
 	};
 });

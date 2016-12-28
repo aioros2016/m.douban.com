@@ -1,6 +1,6 @@
 angular.module('radioMod', [])
-.controller('radioController', ['$scope', '$http', function ($scope, $http){
-	$scope.input = document.getElementById('input-wapper');
+.controller('radioController', function ($scope, $http){
+	var input = document.getElementById('input-wapper');
 	$scope.storage = window.localStorage;
 	$scope.list = $scope.storage.getItem("radioList");
 	$scope.list = JSON.parse($scope.list);
@@ -16,21 +16,9 @@ angular.module('radioMod', [])
 		});
 	};
 	
-	function removeHTMLTag(str) {
-	    str = str.replace(/<\/?[^>]*>/g, ''); //去除HTML tag
-	    str = str.replace(/[ | ]*\n/g, ''); //去除行尾空白
-	    str = str.replace(/&nbsp;/ig, ''); //去掉尾部空格
-	    return str;
-	};
-			    
-	
 	$scope.sendRadio = function(){
 		var oDate = new Date();
-		if($scope.count == 140 || $scope.input.innerHTML.length > 140) return;
-		if($scope.txt.length == 0){
-			alert("输入不能全为空");
-			return;
-		}
+		if(input.innerHTML == '' || input.innerHTML.length > 140) return;
 		$scope.serialNum++;
 		$scope.json = {
 			"id": $scope.serialNum,
@@ -38,7 +26,7 @@ angular.module('radioMod', [])
 	    		"author": "豆瓣",
 	    		"time": oDate.getTime(),
 	    		"title": "",
-	    		"content": $scope.input.innerHTML,
+	    		"content": input.innerHTML,
 	    		"like": 0,
 	    		"comment": 0,
 	    		"retweet": 0
@@ -48,38 +36,26 @@ angular.module('radioMod', [])
 		$scope.storage.setItem("radioList", $scope.list);
 		$scope.list = $scope.storage.getItem("radioList");
 		$scope.list = JSON.parse($scope.list);
+		input.innerHTML = '';
 		$scope.closeRadio();
-		$scope.input.innerHTML = '';
 		$scope.count = 140;
 		$scope.isActive = false;
 	};
 	
 	$scope.counter = function(e){
-		$scope.txt = $scope.input.innerHTML;
-		$scope.txt = removeHTMLTag($scope.txt);
-		$scope.count = 140 - $scope.txt.length;
-		console.log($scope.count);
-		while($scope.txt.lastIndexOf(" ") >= 0){
-			$scope.txt = $scope.txt.replace(" ","");
-		}
-		console.log($scope.txt.length);
-        if($scope.count == 140 || $scope.txt.length > 140){
+		$scope.count = 140 - input.innerHTML.length;
+		console.log(input.innerHTML.length);
+        if(input.innerHTML == '' || input.innerHTML.length > 140){
         		$scope.isActive = false;
         }
         else{
         		$scope.isActive = true;
         };
-        if($scope.txt.length > 140){
+        if(input.innerHTML.length > 140){
         		$scope.warning = true;
         }
         else{
         		$scope.warning = false;
-        };
+        }
     };
-    $scope.addClass = function(){
-    		var aDiv = $scope.input.getElementsByTagName('div');
-    		for(var i=0; i<aDiv.length; i++){
-    			aDiv[i].className = "needsclick";
-    		}
-    }
-}]);
+});

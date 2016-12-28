@@ -1,5 +1,5 @@
 <div class="radio" ng-controller="radioController">
-	<section class="sendRadio">
+	<section class="sendRadio" ng-click="openRadio()">
 		<div class="left">
 			<a href="javascript:;">
 				<span class="face">
@@ -39,4 +39,17 @@
 			</li>
 		</ul>
 	</section>
+	<div class="pop-note" ng-hide="popRadio">
+		<div class="title">
+			<h2>发广播</h2>
+			<div class="cancel" ng-click="closeRadio()">取消</div>
+			<div ng-class="{true: 'send on', false: 'send'}[isActive]" ng-click="sendRadio()">发布</div>
+		</div>
+		<div class="text-area">
+			<div id="input-wapper" class="input-wapper needsclick" contenteditable="plaintext-only" ng-keyup="counter($event)" ng-blur="addClass()" contenteditable="plaintext-only" placeholder="分享生活点滴..."></div>
+		</div>
+		<div class="tools-box">
+			<span ng-class="{true: 'font-count warning', false: 'font-count'}[warning]">{{count}}</span>
+		</div>
+	</div>
 </div>
