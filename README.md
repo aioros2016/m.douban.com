@@ -2,8 +2,8 @@
 这是一个基于angular而开发的豆瓣移动站单页面应用demo,首先它并不是一个完整的mobile site。目前包含了：首页，电影页，图书页，广播页和小组页。所有站点数据均采用本地json文件模拟动态载入。UI方面则完全参照了本尊的设计，html5和css部分全部用less进行了重构，数据交互部分则由angular来完成。这是第一版，后续还会增加一些内页和登录页。另外后续版本会用directive模块化一些组件，也会对用户体验的细节部分持续优化。
 
 <h3>在线地址</h3>
-<pre>http://test11.cdgzy.com/douban/</pre>
-您也可以通过手机扫描二维码来访问（FTP更新不及时，目前通过扫码和在线地址访问的将是旧版本，查看新版本还是请下载压缩包）<br />
+<pre>http://ew-2o2g2ufr5.aliapp.com/douban/</pre>
+您也可以通过手机扫描二维码来访问<br />
 ![扫描二维码](https://github.com/aioros2016/m.douban.com/blob/master/dist/img/code.png)
 
 <h3>更新于2017年1月5日</h3>
