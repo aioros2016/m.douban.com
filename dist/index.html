@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="singlePage" class="{{unlockSrc?'':'locking'}}" ng-controller="indexController">
+<html ng-app="douban" class="{{unlockSrc?'':'locking'}}" ng-controller="indexController">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="robots" content="all">
@@ -12,7 +12,7 @@
 	</head>
 	<body class="{{unlockSrc?'':'locking'}}">
 		<div class="container">
-			<header class="header">
+			<header class="header" ng-show="popSearch">
 				<div class="logo">
 					<h1><a href="#/main">豆瓣</a></h1>
 				</div>
@@ -26,10 +26,10 @@
 					<span class="search" ng-click="openSearch()">搜索</span>
 				</nav>
 			</header>
-			<article class="page">
+			<article class="page" ng-show="popSearch">
 				<ng-view></ng-view>
 			</article>
-			<footer class="footer">
+			<footer class="footer" ng-show="popSearch">
 				<figure class="slogan">
 					<img src="https://img3.doubanio.com/f/talion/7837f29dd7deab9416274ae374a59bc17b5f33c6/pics/card/douban-app-logo.png" width="48">
 					<figcaption>
@@ -141,6 +141,9 @@
 					</ul>
 				</div>
 			</div>
+		</div>
+		<div class="toast" id="toast">
+			<p ng-bind="toastTxt"></p>
 		</div>
 		<script src="//cdn.bootcss.com/angular.js/1.5.8/angular.min.js"></script>
 		<script src="//cdn.bootcss.com/angular.js/1.5.8/angular-route.min.js"></script>

@@ -1,5 +1,5 @@
 angular.module('radioMod', [])
-.controller('radioController', ['$scope', '$http', function ($scope, $http){
+.controller('radioController', ['$scope', '$http', '$filter', function ($scope, $http, $filter){
 	$scope.input = document.getElementById('input-wapper');
 	$scope.storage = window.localStorage;
 	$scope.list = $scope.storage.getItem("radioList");
@@ -15,20 +15,13 @@ angular.module('radioMod', [])
 			alert("载入失败");
 		});
 	};
-	
-	function removeHTMLTag(str) {
-	    str = str.replace(/<\/?[^>]*>/g, ''); //去除HTML tag
-	    str = str.replace(/[ | ]*\n/g, ''); //去除行尾空白
-	    str = str.replace(/&nbsp;/ig, ''); //去掉尾部空格
-	    return str;
-	};
 			    
-	
 	$scope.sendRadio = function(){
+		console.log($scope.bReady);
 		var oDate = new Date();
 		if($scope.count == 140 || $scope.input.innerHTML.length > 140) return;
 		if($scope.txt.length == 0){
-			alert("输入不能全为空");
+			$scope.$emit('fromRadio', '输入不能全为空');
 			return;
 		}
 		$scope.serialNum++;
@@ -56,7 +49,7 @@ angular.module('radioMod', [])
 	
 	$scope.counter = function(e){
 		$scope.txt = $scope.input.innerHTML;
-		$scope.txt = removeHTMLTag($scope.txt);
+		$scope.txt = $filter('filterInput')($scope.txt);
 		$scope.count = 140 - $scope.txt.length;
 		console.log($scope.count);
 		while($scope.txt.lastIndexOf(" ") >= 0){

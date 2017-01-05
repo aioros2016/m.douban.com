@@ -605,3 +605,24 @@ body { color: #111; font-size: 12px; font-family: "Helvetica Neue",Helvetica,Rob
         .show-full { display: block; margin: 20px auto 5px; border-radius: 4px; width: 230px; height: 36px; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.6); background: #F5F5F5; line-height: 36px; text-align: center; font-size: 15px; color: #494949;}
     }
 }
+
+.toast {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    z-index: 10;
+    max-width: 60%;
+    padding: 14px 45px;
+    background-color: #ff485c;
+    opacity: 0;
+    -webkit-transform: translateY(-50%, -50px);
+    transform: translate(-50%, -50px);
+    -webkit-border-radius: 45px;
+    border-radius: 45px;
+    -webkit-transition: opacity .5s;
+    transition: all .5s;
+    transition-delay: .2s;
+    &.active {-webkit-transform: translate(-50%, 10px); transform: translate(-50%, 10px); opacity: 1;}
+    p { overflow: hidden; white-space:nowrap; text-overflow:ellipsis; color: #fff; font-size: 17px; white-space: nowrap;}
+}

@@ -1090,3 +1090,33 @@ body {
   font-size: 15px;
   color: #494949;
 }
+.toast {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: 10;
+  max-width: 60%;
+  padding: 14px 45px;
+  background-color: #ff485c;
+  opacity: 0;
+  -webkit-transform: translateY(-50%, -50px);
+  transform: translate(-50%, -50px);
+  -webkit-border-radius: 45px;
+  border-radius: 45px;
+  -webkit-transition: opacity .5s;
+  transition: all .5s;
+  transition-delay: .2s;
+}
+.toast.active {
+  -webkit-transform: translate(-50%, 10px);
+  transform: translate(-50%, 10px);
+  opacity: 1;
+}
+.toast p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+  font-size: 17px;
+  white-space: nowrap;
+}

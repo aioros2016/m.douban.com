@@ -6,7 +6,7 @@ if ('addEventListener' in document) {
 
 document.body.addEventListener('touchstart',function(){},false);
 
-angular.module('singlePage', ["ngRoute","mainMod","movieMod","bookMod","radioMod","teamMod","detailMod"])
+angular.module('douban', ["ngRoute","mainMod","movieMod","bookMod","radioMod","teamMod","detailMod"])
 .config(['$routeProvider', function ($routeProvider){
 	$routeProvider.when(
 		'/main',{
@@ -43,11 +43,12 @@ angular.module('singlePage', ["ngRoute","mainMod","movieMod","bookMod","radioMod
 			redirectTo:"/main"
 		}
 	);
-}]).controller('indexController', ['$scope', function($scope){
+}]).controller('indexController', ['$scope', '$timeout', function($scope, $timeout){
 	$scope.unlockSrc = true;
 	$scope.popSearch = true;
 	$scope.popRadio = true;
-	$scope.unlockSrc = true;
+	$scope.toastTxt = '';
+	$scope.bReady = true;
 	$scope.closeSearch = function(){
 		$scope.unlockSrc = true;
 		$scope.popSearch = true;
@@ -82,6 +83,25 @@ angular.module('singlePage', ["ngRoute","mainMod","movieMod","bookMod","radioMod
     		$scope.b = $scope.rnd(0,255);
     		$scope.quickMenu[i].style.color = "rgb("+ $scope.r +","+ $scope.g +","+ $scope.b +")";
     };
+    $scope.toast = function(){
+    		if(!$scope.bReady) return;
+    		$scope.bReady = false;
+    		var oToast = document.getElementById('toast');
+    		oToast.className += ' active';
+    		var timer = $timeout(function(){
+            oToast.className = 'toast';
+        }, 2000);
+        oToast.addEventListener('transitionend',function(){
+        		if(oToast.className == 'toast'){
+        			$scope.bReady = true;
+        			console.log($scope.bReady+"动画结束了");
+        		}
+        },false);
+    };
+    $scope.$on('fromRadio', function(d,data) {
+        $scope.toastTxt = data;
+        $scope.toast();
+    });
 }]).directive('onFinishRender', ['$timeout', function ($timeout) {
     return {
         restrict: 'A',
@@ -97,4 +117,11 @@ angular.module('singlePage', ["ngRoute","mainMod","movieMod","bookMod","radioMod
 	return function(input){
 		return $sce.trustAsHtml(input);
 	}
-}]);
+}]).filter('filterInput', function(){
+	return function(input){
+		input = input.replace(/<\/?[^>]*>/g, ''); //去除HTML tag
+	    input = input.replace(/[ | ]*\n/g, ''); //去除行尾空白
+	    input = input.replace(/&nbsp;/ig, ''); //去掉尾部空格
+	    return input;
+	}
+});

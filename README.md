@@ -6,6 +6,10 @@
 您也可以通过手机扫描二维码来访问（FTP更新不及时，目前通过扫码和在线地址访问的将是旧版本，查看新版本还是请下载压缩包）<br />
 ![扫描二维码](https://github.com/aioros2016/m.douban.com/blob/master/dist/img/code.png)
 
+<h3>更新于2016年1月5日</h3>
+1：修正了因ios边缘回弹所造成的视觉问题。<br />
+2：现在全局toast抛弃了原生alert组件，替换为自定义样式，用户体验更好。
+
 <h3>更新于2016年12月28日</h3>
 1：依赖于localstorage，现在广播页可以发广播了。<br />
 2：运用gulp-ng-annotate修复了angular注入式依赖不能混淆压缩的问题,进一步缩小了控制器文件的体积。
