@@ -5,6 +5,7 @@
 <pre>http://lizhigang.cn/douban/</pre>
 您也可以通过手机扫描二维码来访问<br />
 ![扫描二维码](https://github.com/aioros2016/m.douban.com/blob/master/src/qr-code.png)
+![扫描二维码](https://github.com/aioros2016/ele/blob/master/qr-code.jpg)<br />
 
 <h3>更新于2017年1月5日</h3>
 1：修正了因ios边缘回弹所造成的视觉问题。<br />
