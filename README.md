@@ -4,7 +4,7 @@
 <h3>在线地址</h3>
 <pre>http://lizhigang.cn/douban/</pre>
 您可以扫描以下二维码来预览页面效果<br />
-![扫描二维码](https://github.com/aioros2016/m.douban.com/blob/master/qr-code.png)<br />
+![扫描二维码](https://raw.githubusercontent.com/aioros2016/m.douban.com/master/qr-code.png)<br />
 
 <h3>更新于2017年1月5日</h3>
 1：修正了因ios边缘回弹所造成的视觉问题。<br />
